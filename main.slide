@@ -1,0 +1,59 @@
+go1.24で追加予定のGeneric Type Aliasesとは？
+
+23 Oct 2024
+
+Tomoki Ota
+
+http://qiita.jp/tomomon1227
+https://speakerdeck.com/tomo1227
+
+* Type Definition
+
+新しい型を定義する。
+
+    type Foo int
+
+Fooという新しい型を作る。
+Fooとintは別の全く別の型。
+
+* Type Definitionの例
+
+.play src/type_definition.go
+
+* 型エイリアス
+
+go1.9で追加された機能。
+
+    type Foo = int
+
+あくまでFooはint型のエイリアスなので、int型と同じ。新しい型を定義しているわけではない。
+
+* 型エイリアスの例
+
+Fooにint型を代入することができる。
+
+.play src/type_ailas.go
+
+* 型エイリアスの例2
+
+    package oldpkg
+
+    type User struct {
+        ID   int
+        Name string
+    }
+
+このパッケージを新しいパッケージに移動したい場合以下のようにする。
+
+    package newpkg
+
+    import "path/to/oldpkg"
+
+    type User = oldpkg.User
+
+newpkg.User と oldpkg.User は同じ型になる。
+
+* Generic Type Aliases
+
+Go1.18でジェネリクスが導入されたが、エイリアスでジェネリクスを使用することはできなかった。
+**Generic Type Aliases** によって以下のようなジェネリクスを含むエイリアスがサポートされる。

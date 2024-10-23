@@ -266,7 +266,9 @@
     ".devcontainer/devcontainer.json",
     ".golangci.toml"
   ],
-  "errorLens.excludeBySource": ["cSpell"],
+  "errorLens.excludeBySource": [
+    "cSpell"
+  ],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#05848b",
     "activityBar.background": "#05848b",
