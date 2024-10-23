@@ -18,7 +18,7 @@ Fooとintは別の全く別の型。
 
 * Type Definitionの例
 
-.play src/type_definition.go
+.play ../src/type_definition.go
 
 * 型エイリアス
 
@@ -32,7 +32,7 @@ go1.9で追加された機能。
 
 Fooにint型を代入することができる。
 
-.play src/type_ailas.go
+.play ../src/type_ailas.go
 
 * 型エイリアスの例2
 
@@ -56,4 +56,30 @@ newpkg.User と oldpkg.User は同じ型になる。
 * Generic Type Aliases
 
 Go1.18でジェネリクスが導入されたが、エイリアスでジェネリクスを使用することはできなかった。
-**Generic Type Aliases** によって以下のようなジェネリクスを含むエイリアスがサポートされる。
+*Generic*Type*Aliases* によって以下のようなジェネリクスを含むエイリアスがサポートされる。
+
+* Generic Type Aliasesの例
+
+Fooがgeneric型の場合を考える。
+
+    package oldpkg
+
+    type Foo[T any] struct {
+        ID   T
+        Name string
+    }
+
+Fooを新しいnewpkgに移行する。
+
+    package newpkg
+
+    import "path/to/oldpkg"
+
+    type User[T any] = oldpkg.User[T]
+
+パッケージ間でジェネリック型を移動するときに完全な型の互換性を維持できる
+
+* 終わりに
+
+Go 1.23 では、`GOEXPERIMENT=aliastypeparams` フラグを指定することで使用することができる。
+Go 1.24からはデフォルトで使用可能となる予定。
