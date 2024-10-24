@@ -3,10 +3,7 @@
   "service": "devcontainer",
   "workspaceFolder": "/workspace",
   "dockerComposeFile": ["../compose.yml"],
-  "features": {
-    "ghcr.io/devcontainers/features/go:latest": {}
-  },
-  "forwardPorts": [3999],
+  "forwardPorts": [8080],
   "remoteUser": "vscode",
   "postCreateCommand": "sh .devcontainer/scripts/post_create.sh",
   "postStartCommand": "sh .devcontainer/scripts/post_start.sh ${containerWorkspaceFolder}",
@@ -15,15 +12,15 @@
       "extensions": [
         // Go
         "golang.go",
-        "premparihar.gotest",
         // yaml, jsonc, json, toml
         "esbenp.prettier-vscode",
         // markdown
         "yzhang.markdown-all-in-one",
         "DavidAnson.vscode-markdownlint",
-        "bierner.github-markdown-preview",
+        "shd101wyy.markdown-preview-enhanced",
         // その他
         "streetsidesoftware.code-spell-checker",
+        "naumovs.color-highlight",
         "Gruntfuggly.todo-tree",
         "oderwat.indent-rainbow"
       ]

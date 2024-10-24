@@ -1,3 +1,1 @@
-FROM mcr.microsoft.com/devcontainers/base:jammy
-RUN apt update && \
-    apt install -y vim curl
+FROM mcr.microsoft.com/devcontainers/go:1-1.23-bookworm
