@@ -18,7 +18,7 @@ Fooとintは別の全く別の型。
 
 ## Type Definitionの例
 
-.play ../src/type_definition.go
+.play src/type_definition.go
 
 ## 型エイリアス
 
@@ -32,7 +32,7 @@ go1.9で追加された機能。
 
 Fooにint型を代入することができる。
 
-.play ../src/type_ailas.go
+.play src/type_ailas.go
 
 ## 型エイリアスの例2
 
@@ -95,7 +95,7 @@ Userを新しいnewpkgに移行する。
 
 ## ジェネリクスマップ型
 
-.play ../src/generic_type_aliases.go
+.play src/generic_type_aliases.go
 
 [Go Playground](https://go.dev/play/p/db4RIhEpMRH?v=gotip)
 
@@ -109,7 +109,7 @@ Userを新しいnewpkgに移行する。
 
 ## Generic Type Aliasesと型制約
 
-.play ../src/type_constraints_generic.go
+.play src/type_constraints_generic.go
 
 [Go Playground](https://go.dev/play/p/LiPwk770VhP?v=gotip)
 
@@ -117,7 +117,7 @@ Userを新しいnewpkgに移行する。
 
 型リテラルのエイリアス。
 
-.play ../src/point3d.go
+.play src/point3d.go
 
 [Go Playground](https://go.dev/play/p/h7B2UHDfFAH?v=gotip)
 
