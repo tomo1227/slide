@@ -84,7 +84,7 @@ Userを新しいnewpkgに移行する。
 
     type User = oldpkg.User
 
-## ジェネリクスマップ型
+## ジェネリクスのマップの例
 
     type Map[K comparable, V any] mapImplementation
 
@@ -92,7 +92,7 @@ Userを新しいnewpkgに移行する。
 
     type Set[K comparable] = Map[K, bool]
 
-## ジェネリクスマップ型
+## ジェネリクスのマップの例
 
 .play src/generic_type_aliases.go
 

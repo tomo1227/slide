@@ -36,3 +36,4 @@ tmp
 # Crash log files
 crash.log
 crash.*.log
+.vercel
